@@ -111,7 +111,7 @@ class TaxonomyWalker extends \Walker_Category
         // put together the full link URL
         $queryString = http_build_query($filters);
         if (strlen($queryString)) {
-            $link = '/?'.$queryString;
+            $link = get_home_url().'/?'.$queryString;
         } else {
             $link = get_post_type_archive_link($args['post_type']);
         }
